@@ -1,0 +1,44 @@
+// List of Valorant agents and their image URLs
+const agents = [
+    { name: "Brimstone", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/7/71/Brimstone_VALORANT.png" },
+    { name: "Viper", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Viper_VALORANT.png" },
+    { name: "Omen", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a0/Omen_VALORANT.png" },
+    { name: "Killjoy", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Killjoy_VALORANT.png" },
+    { name: "Cypher", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/3/3d/Cypher_VALORANT.png" },
+    { name: "Sova", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/4/45/Sova_VALORANT.png" },
+    { name: "Sage", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Sage_VALORANT.png" },
+    { name: "Phoenix", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/ab/Phoenix_VALORANT.png" },
+    { name: "Raze", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/4/43/Raze_VALORANT.png" },
+    { name: "Breach", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/e/e5/Breach_VALORANT.png" },
+    { name: "Reyna", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/7/76/Reyna_VALORANT.png" },
+    { name: "Jett", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/5/52/Jett_VALORANT.png" },
+    { name: "Skye", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0c/Skye_VALORANT.png" },
+    { name: "Yoru", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/af/Yoru_VALORANT.png" },
+    { name: "Astra", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/1/1c/Astra_VALORANT.png" },
+    { name: "KAY/O", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/2/2b/KAYO_VALORANT.png" },
+    { name: "Chamber", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Chamber_VALORANT.png" },
+    { name: "Neon", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/f/f4/Neon_VALORANT.png" },
+    { name: "Fade", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/d/d5/Fade_VALORANT.png" },
+    { name: "Harbor", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/92/Harbor_VALORANT.png" },
+    { name: "Gekko", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/1/1d/Gekko_VALORANT.png" },
+    { name: "Deadlock", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/9/9e/Deadlock_VALORANT.png" },
+    { name: "Iso", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/7/73/Iso_VALORANT.png" },
+    { name: "Clove", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/4/46/Clove_VALORANT.png" },
+    { name: "Vyse", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/e/e2/Vyse_VALORANT.png" },
+    { name: "Tejo", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/0/03/Tejo_VALORANT.png" },
+    { name: "Waylay", imgSrc: "https://upload.wikimedia.org/wikipedia/commons/a/aa/Waylay_VALORANT.png" }
+];
+
+// Function to pick a random agent
+function pickRandomAgent() {
+    const randomIndex = Math.floor(Math.random() * agents.length);  // Get a random index
+    const agent = agents[randomIndex];  // Get the agent based on the index
+
+    // Update the HTML with the chosen agent's name and image
+    document.getElementById("agentName").textContent = agent.name;
+    document.getElementById("agentImage").src = agent.imgSrc;
+    document.getElementById("agentImage").alt = agent.name;
+}
+
+// Add event listener to the button
+document.getElementById('randomizeBtn').addEventListener('click', pickRandomAgent);
